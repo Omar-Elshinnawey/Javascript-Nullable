@@ -1,0 +1,23 @@
+{
+  "name": "optional",
+  "version": "0.1.0",
+  "description": "An implementation for the nullable design pattern in javascript",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "babel ./src --source-maps-inline -d ./dist"
+  },
+  "keywords": [
+    "Nullable",
+    "Optional",
+    "Design-Pattern"
+  ],
+  "author": "Omar Elshinnawey",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5"
+  }
+}
