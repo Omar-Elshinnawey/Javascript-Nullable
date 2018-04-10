@@ -1,4 +1,4 @@
-const Optional = require('../optional');
+const Optional = require('../src/optional');
 
 const expect = require('chai').expect;
 
