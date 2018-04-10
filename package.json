@@ -2,7 +2,7 @@
   "name": "optional",
   "version": "0.1.0",
   "description": "An implementation for the nullable design pattern in javascript",
-  "main": "./src/index.js",
+  "main": "./src/optional.js",
   "scripts": {
     "test": "nyc mocha",
     "build": "babel ./src --source-maps-inline -d ./dist"
