@@ -7,7 +7,7 @@ class Optional {
 	}
 
 	/**
-	 * returns the value (could be null or undefined)
+	 * Returns the value (could be null or undefined).
 	 * @returns {any}
 	 */
 	get() {
@@ -15,7 +15,7 @@ class Optional {
 	}
 
 	/**
-	 * returns the value if it is present otherwise returns the supplied defaultValue
+	 * Returns the value if it is present otherwise returns the supplied defaultValue.
 	 * @param {any} defaultValue 
 	 * @returns {any}
 	 */
@@ -30,7 +30,7 @@ class Optional {
 	}
 
 	/**
-	 * returns true if the value is defined. False otherwise. (nulls return true)
+	 * Returns true if the value is defined, false otherwise. (nulls return true).
 	 * @returns {boolean}
 	 */
 	isDefined() {
@@ -41,7 +41,7 @@ class Optional {
 	}
 
 	/**
-	 * returns true if the value is not null. False otherwise
+	 * Returns true if the value is not null, false otherwise.
 	 * @returns {boolean}
 	 */
 	isNotNull() {
@@ -52,7 +52,7 @@ class Optional {
 	}
 
 	/**
-	 * returns true if the value is not null and defined.
+	 * Returns true if the value is not null and defined.
 	 * @returns {boolean}
 	 */
 	isPresent() {
@@ -63,7 +63,29 @@ class Optional {
 	}
 
 	/**
-	 * maps the value to another optional if the value exists
+	 * Calls the function fn if the value is present.
+	 * @param {Function} fn 
+	 * @returns {void}
+	 */
+	ifPresent(fn) {
+		if(this.isPresent())
+			fn(this.value);
+	}
+
+	/**
+	 * Calls the function fn if the value is present. otherwise calls elseFn.
+	 * @param {Function} fn 
+	 * @param {Function} elseFn 
+	 */
+	ifPresentOrElse(fn, elseFn) {
+		if(this.isPresent())
+			fn(this.value);
+		else
+			elseFn();
+	}
+
+	/**
+	 * Maps the value to another optional if the value exists.
 	 * @param {Function} fn 
 	 * @returns {Optional}
 	 */
@@ -75,7 +97,35 @@ class Optional {
 	}
 
 	/**
-	 * returns an optional with empty value
+	 * Maps the value to another if the value exists. returns the new value or undefined.
+	 * @param {Function} fn 
+	 * @returns {any}
+	 */
+	flatMap(fn) {
+		if (this.isPresent())
+			return fn(this.value);
+		
+		return undefined;
+	}
+
+	/**
+	 * If the value is present and the result of predicate fn is true or fn is a value that is equal to the optional value a new optional is returned. 
+	 * Returns empty optional otherwise.
+	 * @param {Function|any} fn 
+	 * @returns {Optional}
+	 */
+	filter(fn) {
+		if (this.isPresent()) {
+			const matches = typeof fn === 'function'? fn(this.value): this.value === fn;
+
+			return matches? Optional.ofNullable(this.value): Optional.empty();
+		}
+
+		return Optional.empty();
+	}
+
+	/**
+	 * Returns an optional with empty value.
 	 * @returns {Optional}
 	 */
 	static empty() {
@@ -83,7 +133,7 @@ class Optional {
 	}
 
 	/**
-	 * returns an optional with the provided value
+	 * Returns an optional with the provided value.
 	 * @param {any} value 
 	 * @returns {Optional}
 	 */

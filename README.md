@@ -7,9 +7,13 @@
     * [isDefined()](#isDefined)
     * [isNotNull()](#isNotNull)
     * [isPresent()](#isPresent)
+    * [ifPresent(fn)](#ifPresent)
+    * [ifPresentOrElse(fn, elseFn)](#ifPresentOrElse)
     * [getOr(val)](#getOr)
     * [get()](#get)
     * [map(fn)](#map)
+    * [flatMap(fn)](#flatMap)
+    * [filter(fnOrVal)](#filter)
 
 ## Optional Class <a name="OptionalClass" />
 
@@ -18,6 +22,10 @@
 ### isDefined <a name="isDefined" />
 ### isNotNull <a name="isNotNull" />
 ### isPresent <a name="isPresent" />
+### ifPresent <a name="ifPresent" />
+### ifPresentOrElse <a name="ifPresentOrElse" />
 ### getOr <a name="getOr" />
 ### get <a name="get" />
 ### map <a name="map" />
+### flatMap <a name="flatMap" />
+### filter <a name="filter" />
