@@ -29,11 +29,11 @@ describe('testing empty optional class', () => {
     });
 
     it('should return 1', () => {
-        expect(emptyUndefined.getOr(1)).to.equal(1);
+        expect(emptyUndefined.getOrElse(1)).to.equal(1);
     });
 
     it('should return 2', () => {
-        expect(emptyUndefined.getOr(() => 2)).to.equal(2);
+        expect(emptyUndefined.getOrElse(() => 2)).to.equal(2);
     });
 
     it('should return true for null optional', () => {
@@ -94,12 +94,12 @@ describe('testing not empty optionals', () => {
         expect(optional.get()).to.equal(0);
     });
 
-    it('should return 0 for getOr', () => {
-        expect(optional.getOr(1)).to.equal(0);
+    it('should return 0 for getOrElse', () => {
+        expect(optional.getOrElse(1)).to.equal(0);
     });
 
-    it('should return 0 for getOr function', () => {
-        expect(optional.getOr(() => 2)).to.equal(0);
+    it('should return 0 for getOrElse function', () => {
+        expect(optional.getOrElse(() => 2)).to.equal(0);
     });
 
     it('should call fn (ifPresent)', () => {
@@ -120,12 +120,12 @@ describe('testing not empty optionals', () => {
     });
 
     it('should return optional with value 0 (filter)', () => {
-        expect(optional.filter(val => val === 0).getOr(1)).to.equal(0);
-        expect(optional.filter(0).getOr(1)).to.equal(0);        
+        expect(optional.filter(val => val === 0).getOrElse(1)).to.equal(0);
+        expect(optional.filter(0).getOrElse(1)).to.equal(0);        
     });
 
     it('should return empty optional (filter)', () => {
-        expect(optional.filter(val => val === 1).getOr(1)).to.equal(1);
-        expect(optional.filter(1).getOr(1)).to.equal(1);        
+        expect(optional.filter(val => val === 1).getOrElse(1)).to.equal(1);
+        expect(optional.filter(1).getOrElse(1)).to.equal(1);        
     });
 });

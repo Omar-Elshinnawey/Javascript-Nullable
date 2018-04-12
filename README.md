@@ -9,7 +9,7 @@
     * [isPresent()](#isPresent)
     * [ifPresent(fn)](#ifPresent)
     * [ifPresentOrElse(fn, elseFn)](#ifPresentOrElse)
-    * [getOr(val)](#getOr)
+    * [getOrElse(val)](#getOrElse)
     * [get()](#get)
     * [map(fn)](#map)
     * [flatMap(fn)](#flatMap)
@@ -24,7 +24,7 @@
 ### isPresent <a name="isPresent" />
 ### ifPresent <a name="ifPresent" />
 ### ifPresentOrElse <a name="ifPresentOrElse" />
-### getOr <a name="getOr" />
+### getOrElse <a name="getOrElse" />
 ### get <a name="get" />
 ### map <a name="map" />
 ### flatMap <a name="flatMap" />

@@ -19,7 +19,7 @@ class Optional {
 	 * @param {any} defaultValue 
 	 * @returns {any}
 	 */
-	getOr(defaultValue) {
+	getOrElse(defaultValue) {
 		if (this.isPresent())
 			return this.value;
 
