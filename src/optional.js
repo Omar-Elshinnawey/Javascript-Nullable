@@ -97,7 +97,7 @@ class Optional {
 	}
 
 	/**
-	 * Maps the value to another if the value exists. returns the new value or undefined.
+	 * Maps the value to another if the value exists. returns the new value or null.
 	 * @param {Function} fn 
 	 * @returns {any}
 	 */
@@ -105,7 +105,7 @@ class Optional {
 		if (this.isPresent())
 			return fn(this.value);
 		
-		return undefined;
+		return null;
 	}
 
 	/**
