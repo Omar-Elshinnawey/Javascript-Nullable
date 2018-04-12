@@ -3,8 +3,8 @@ declare module 'optional' {
         static empty<T>(): Optional<T>;
         static ofNullable<T>(value: T): Optional<T>;
 
-        getOr(fn: (value: T) => T): T;
-        getOr(defaultValue: T): T;
+        getOrElse(fn: (value: T) => T): T;
+        getOrElse(defaultValue: T): T;
         get(): T;
 
         isDefined(): boolean;
