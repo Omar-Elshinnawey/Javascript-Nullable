@@ -4,18 +4,18 @@ function Optional(value) {
 
 Optional.empty = function () {
 	return new Optional();
-}
+};
 
 Optional.ofNullable = function(value) {
 	return new Optional(value);
-}
+};
 
 Optional.prototype = {
 	/**
 	 * Returns the value (could be null or undefined).
 	 * @returns {any}
 	 */
-	get: function() {
+	get() {
 		return this.value;
 	},
 
@@ -24,7 +24,7 @@ Optional.prototype = {
 	 * @param {any} defaultValue 
 	 * @returns {any}
 	 */
-	getOrElse: function(defaultValue) {
+	getOrElse(defaultValue) {
 		if (this.isPresent())
 			return this.value;
 		
@@ -38,7 +38,7 @@ Optional.prototype = {
 	 * Returns true if the value is defined, false otherwise. (nulls return true).
 	 * @returns {boolean}
 	 */
-	isDefined: function () {
+	isDefined() {
 		if (typeof this.value === 'undefined')
 			return false;
 
@@ -49,7 +49,7 @@ Optional.prototype = {
 	 * Returns true if the value is not null, false otherwise.
 	 * @returns {boolean}
 	 */
-	isNotNull: function() {
+	isNotNull() {
 		if (this.value === null)
 			return false;
 		
@@ -60,7 +60,7 @@ Optional.prototype = {
 	 * Returns true if the value is not null and defined.
 	 * @returns {boolean}
 	 */
-	isPresent: function() {
+	isPresent() {
 		if(this.isDefined() && this.isNotNull())
 			return true;
 
@@ -72,7 +72,7 @@ Optional.prototype = {
 	 * @param {Function} fn 
 	 * @returns {void}
 	 */
-	ifPresent: function(fn) {
+	ifPresent(fn) {
 		if(this.isPresent())
 			fn(this.value);
 	},
@@ -82,7 +82,7 @@ Optional.prototype = {
 	 * @param {Function} fn 
 	 * @param {Function} elseFn 
 	 */
-	ifPresentOrElse: function(fn, elseFn) {
+	ifPresentOrElse(fn, elseFn) {
 		if(this.isPresent())
 			fn(this.value);
 		else
@@ -94,7 +94,7 @@ Optional.prototype = {
 	 * @param {Function} fn 
 	 * @returns {Optional}
 	 */
-	map: function(fn) {
+	map(fn) {
 		if(this.isPresent())
 			return Optional.ofNullable(fn(this.value));
 		
@@ -106,7 +106,7 @@ Optional.prototype = {
 	 * @param {Function} fn 
 	 * @returns {any}
 	 */
-	flatMap: function(fn) {
+	flatMap(fn) {
 		if(this.isPresent()) {
 			const result = fn(this.value);
 
@@ -125,7 +125,7 @@ Optional.prototype = {
 	 * @param {Function|any} fn 
 	 * @returns {Optional}
 	 */
-	filter: function(fn) {
+	filter(fn) {
 		if(this.isPresent()){
 
 			const matches = typeof fn === 'function'? fn(this.value): fn === this.value;
@@ -137,6 +137,6 @@ Optional.prototype = {
 
 		return Optional.empty();
 	}
-}
+};
 
 module.exports = Optional;
