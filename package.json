@@ -1,6 +1,6 @@
 {
-  "name": "optional",
-  "version": "0.1.0",
+  "name": "optionull",
+  "version": "0.2.1",
   "description": "An implementation for the nullable design pattern in javascript",
   "main": "index.js",
   "types": "index.d.ts",
@@ -10,8 +10,7 @@
   },
   "keywords": [
     "Nullable",
-    "Optional",
-    "Design-Pattern"
+    "Optional"
   ],
   "author": "Omar Elshinnawey",
   "license": "MIT",

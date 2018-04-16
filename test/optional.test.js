@@ -1,4 +1,4 @@
-const Optional = require('../src/optional');
+const Optional = require('../src/optionull');
 
 const { expect } = require('chai');
 
@@ -60,7 +60,7 @@ describe('testing empty optional class', () => {
     });
 
     it('should return null (flatMap)', () => {
-        expect(emptyUndefined.flatMap(val => 'something')).to.be.null;
+        expect(emptyUndefined.flatMap(val => 'something').isPresent()).to.be.false;
     });
 
     it('should return empty optional (filter)', () => {
@@ -114,7 +114,8 @@ describe('testing not empty optionals', () => {
     });
 
     it('should return 2 (flatMap)', () => {
-        expect(optional.flatMap(val => 2)).to.equal(2);
+        expect(optional.flatMap(val => 2).get()).to.equal(2);
+        expect(optional.flatMap(val => Optional.ofNullable(1)).get()).to.equal(1);
     });
 
     it('should return optional with value 0 (filter)', () => {

@@ -1,4 +1,4 @@
-declare module 'optional' {
+declare module 'optionull' {
     export class Optional<T> {
         static empty<T>(): Optional<T>;
         static ofNullable<T>(value: T): Optional<T>;
@@ -15,7 +15,7 @@ declare module 'optional' {
         ifPresentOrElse(fn: (value: T) => any, elseFn: () => any): void;
 
         map<U>(fn: (value: T) => U): Optional<U>;
-        flatMap<U>(fn: (value: T) => U): U;
+        flatMap<U>(fn: (value: T) => any): Optional<U>;
 
         filter(fn: (value: T) => boolean): Optional<T>;
         filter(val: any): Optional<T>;
