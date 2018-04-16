@@ -4,6 +4,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/omar-elshinnawey/javascript-nullable/badge.svg?targetFile=package.json)](https://snyk.io/test/github/omar-elshinnawey/javascript-nullable?targetFile=package.json)
 
 ## Table of Contents
+* [Installation](#installation)
 * [Optional Class](#OptionalClass)
     * [ofNullable(value)](#ofNullable)
     * [empty()](#empty)
@@ -18,7 +19,19 @@
     * [flatMap(fn)](#flatMap)
     * [filter(fnOrVal)](#filter)
 
+## Installation <a name="installation" />
+```
+npm install --save optionull
+```
+
 ## Optional Class <a name="OptionalClass" />
+```javascript
+const Optional = require('optionull').Optional;
+// or
+const { Optional } = require('optionull');
+// or
+import { Optional } from 'optionull';
+```
 
 ### ofNullable(value) <a name="ofNullable" />
 Creates and returns a new optional with the value provided.
