@@ -12,6 +12,10 @@
     "Nullable",
     "Optional"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Omar-Elshinnawey/optionull.git"
+  },
   "author": "omardev <elshinnaweyom@gmail.com>",
   "license": "MIT",
   "devDependencies": {
