@@ -1,6 +1,6 @@
 {
   "name": "optionull",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An implementation for the nullable design pattern in javascript",
   "main": "index.js",
   "types": "index.d.ts",
