@@ -26,6 +26,10 @@ npm install --save optionull
 ```
 
 ## Optional Class <a name="OptionalClass" />
+```html
+<!-- In the browser -->
+<script src="https://unpkg.com/optionull"></script>
+```
 ```javascript
 const Optional = require('optionull').Optional;
 // or
