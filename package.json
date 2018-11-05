@@ -2,12 +2,13 @@
   "name": "optionull",
   "version": "0.3.2",
   "description": "An implementation for the nullable design pattern in javascript",
-  "main": "index.js",
+  "main": "dist/optionull.min.js",
   "unpkg": "dist/optionull.min.js",
   "types": "index.d.ts",
   "scripts": {
     "build": "grunt",
-    "test": "nyc mocha"
+    "lint": "eslint ./src/optionull.js",
+    "test": "grunt && nyc mocha"
   },
   "keywords": [
     "Nullable",
@@ -25,6 +26,9 @@
     "@babel/preset-env": "^7.1.0",
     "babelify": "^10.0.0",
     "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "grunt": "^1.0.3",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-clean": "^2.0.0",
