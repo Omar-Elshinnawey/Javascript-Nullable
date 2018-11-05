@@ -2,7 +2,7 @@
   "name": "optionull",
   "version": "0.3.2",
   "description": "An implementation for the nullable design pattern in javascript",
-  "main": "dist/optionull.min.js",
+  "main": "index.js",
   "unpkg": "dist/optionull.min.js",
   "types": "index.d.ts",
   "scripts": {

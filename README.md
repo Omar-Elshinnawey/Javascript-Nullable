@@ -28,7 +28,9 @@ npm install --save optionull
 <script src="https://unpkg.com/optionull"></script>
 ```
 ```javascript
-const Optional = require('optionull');
+const Optional = require('optionull').Optional;
+// or
+const { Optional } = require('optionull');
 // or
 import { Optional } from 'optionull';
 ```
