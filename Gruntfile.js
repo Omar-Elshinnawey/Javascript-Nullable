@@ -1,37 +1,34 @@
-const grunt = require('grunt');
+module.exports = (grunt) => {
+  grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-grunt.loadNpmTasks('grunt-browserify');
-grunt.loadNpmTasks('grunt-contrib-clean');
-
-grunt.initConfig({
+  grunt.initConfig({
     clean: {
-        dist: {
-            src: ['dist']
-        },
-        tmp: {
-            src: ['dist/tmp']
-        },
-        optionull: {
-            src: ['dist/optionull.js']
-        }
+      dist: {
+        src: ['dist'],
+      },
+      tmp: {
+        src: ['dist/tmp'],
+      },
+      optionull: {
+        src: ['dist/optionull.js'],
+      },
     },
     browserify: {
-        dist: {
-            files: {
-                'dist/optionull.min.js': 'src/optionull.js'
-            },
-            options: {
-                transform: [
-                    ['babelify', { presets: [ 'env' ] }],
-                    ['uglifyify']
-                ],
-                browserifyOptions: {
-                    standalone: 'Optional'
-                }
-            }
-        }
-    }
-});
+      dist: {
+        files: {
+          'dist/optionull.min.js': 'src/optionull.js',
+        },
+        options: {
+          transform: [['babelify', { presets: ['@babel/env'] }], ['uglifyify']],
+          browserifyOptions: {
+            standalone: 'Optional',
+          },
+        },
+      },
+    },
+  });
 
-grunt.registerTask('build', ['clean', 'browserify'])
-grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['clean', 'browserify']);
+  grunt.registerTask('default', ['build']);
+};

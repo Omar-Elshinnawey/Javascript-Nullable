@@ -1,9 +1,6 @@
 # Optionull
 Basic Implementation for Optional/Nullables in Javascript
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9a4570070ef04d25ad21fe3c15b11171)](https://app.codacy.com/app/el-shinnaweyom/Javascript-Nullable?utm_source=github.com&utm_medium=referral&utm_content=Omar-Elshinnawey/Javascript-Nullable&utm_campaign=badger)
-[![Known Vulnerabilities](https://snyk.io/test/github/omar-elshinnawey/javascript-nullable/badge.svg?targetFile=package.json)](https://snyk.io/test/github/omar-elshinnawey/javascript-nullable?targetFile=package.json)
-
 ## Table of Contents
 * [Installation](#installation)
 * [Optional Class](#OptionalClass)

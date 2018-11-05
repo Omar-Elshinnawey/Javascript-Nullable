@@ -1,12 +1,14 @@
 {
   "name": "optionull",
-  "version": "0.3.2",
+  "version": "1.0.0",
   "description": "An implementation for the nullable design pattern in javascript",
   "main": "index.js",
   "unpkg": "dist/optionull.min.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "nyc mocha"
+    "build": "grunt",
+    "lint": "eslint ./src/optionull.js",
+    "test": "grunt && nyc mocha"
   },
   "keywords": [
     "Nullable",
@@ -14,20 +16,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Omar-Elshinnawey/optionull.git"
+    "url": "https://github.com/chefomar/optionull.git"
   },
   "author": "omardev <elshinnaweyom@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "chai": "^4.1.2",
-    "grunt": "^1.0.2",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babelify": "^10.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "grunt": "^1.0.3",
     "grunt-browserify": "^5.3.0",
-    "grunt-contrib-clean": "^1.1.0",
-    "mocha": "^5.0.5",
-    "nyc": "^11.6.0",
-    "uglifyify": "^4.0.5"
+    "grunt-contrib-clean": "^2.0.0",
+    "moch": "0.0.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "uglifyify": "^5.0.1"
   }
 }
