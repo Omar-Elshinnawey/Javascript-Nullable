@@ -22,7 +22,7 @@ grunt.initConfig({
             },
             options: {
                 transform: [
-                    ['babelify', { presets: [ 'env' ] }],
+                    ['babelify', { presets: [ '@babel/env' ] }],
                     ['uglifyify']
                 ],
                 browserifyOptions: {
