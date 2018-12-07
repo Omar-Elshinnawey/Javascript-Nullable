@@ -1,0 +1,20 @@
+branches:
+  only:
+  - master
+language: node_js
+node_js:
+- iojs
+- '7'
+before_script:
+- npm i -D
+script:
+- npm test
+- npm run build
+deploy:
+  on:
+    tags: true
+  skip_cleanup: true
+  provider: npm
+  email: elshinnaweyom@gmail.com
+  api_key:
+    secure: $NPM_TOKEN
