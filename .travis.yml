@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - node
+before_script:
+  - npm install -g npm@latest
+  - npm ci
+script:
+  - npm test
+  - npm run build
+deploy:
+  on:
+    tags: true
+  skip_cleanup: true
+  provider: npm
+  email: elshinnaweyom@gmail.com
+  api_key:
+    secure: $NPM_TOKEN
