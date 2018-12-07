@@ -1,15 +1,15 @@
 branches:
   only:
-  - master
+    - master
 language: node_js
 node_js:
-- iojs
-- '7'
+  - iojs
+  - '7'
 before_script:
-- npm i -D
+  - npm ci
 script:
-- npm test
-- npm run build
+  - npm test
+  - npm run build
 deploy:
   on:
     tags: true
