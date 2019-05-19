@@ -55,7 +55,7 @@ opt.isDefined(); // true
 nullOpt.isDefined(); // also true
 
 emptyOpt.isDefined(); // false
-Optiona.ofNullable(undefined).isDefined(); // false
+Optional.ofNullable(undefined).isDefined(); // false
 ```
 ### isNotNull() <a name="isNotNull" />
 Returns true if the value is not null.
@@ -64,7 +64,7 @@ opt.isNotNull(); // true
 nullOpt.isNotNull(); // false
 
 emptyOpt.isNotNull(); // true
-Optiona.ofNullable(undefined).isNotNull(); // true
+Optional.ofNullable(undefined).isNotNull(); // true
 ```
 
 ### isPresent() <a name="isPresent" />
@@ -74,7 +74,7 @@ opt.isPresent(); // true
 nullOpt.isPresent(); // false
 
 emptyOpt.isPresent(); // false
-Optiona.ofNullable(undefined).isPresent(); // false
+Optional.ofNullable(undefined).isPresent(); // false
 ```
 
 ### ifPresent(fn) <a name="ifPresent" />
