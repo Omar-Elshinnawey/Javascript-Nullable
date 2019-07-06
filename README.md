@@ -1,4 +1,6 @@
 # Optionull
+[![Build Status](https://travis-ci.com/chefomar/optionull.svg?branch=master)](https://travis-ci.com/chefomar/optionull)
+
 Basic Implementation for Optional/Nullables in Javascript
 
 ## Table of Contents
